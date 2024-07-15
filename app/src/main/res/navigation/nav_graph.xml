@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tripod.fire.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signinFragment"
+            app:destination="@id/signinFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_tabContainFragment"
+            app:destination="@id/tabContainFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signinFragment"
+        android:name="com.tripod.fire.fragments.SigninFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment_to_tabContainFragment"
+            app:destination="@id/tabContainFragment" />
+        <action
+            android:id="@+id/action_signinFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tabContainFragment"
+        android:name="com.tripod.fire.fragments.TabContainFragment"
+        android:label="fragment_tab_contain"
+        tools:layout="@layout/fragment_tab_contain" >
+        <action
+            android:id="@+id/action_tabContainFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/tabContainFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_tabContainFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:popUpTo="@layout/fragment_chat"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_tabContainFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_tabContainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.tripod.fire.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.tripod.fire.fragments.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.tripod.fire.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
+</navigation>

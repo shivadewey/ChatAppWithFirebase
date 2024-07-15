@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "899682366552",
+    "project_id": "fire-51c14",
+    "storage_bucket": "fire-51c14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:899682366552:android:8ccb71a3aa8a2344da062d",
+        "android_client_info": {
+          "package_name": "com.tripod.fire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbxoyWrwxS8poa4U0t8rufVSn6qTvE0Ug"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
